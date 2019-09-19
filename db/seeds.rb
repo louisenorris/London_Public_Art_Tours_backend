@@ -16,6 +16,7 @@ a2 = Artwork.create(title: "Winged Figure", artist: "Barbara Hepworth", year: 19
 a3 = Artwork.create(title: "Quantum Cloud", artist: "Antony Gormley", year: 1999, lat: 51.5018406, lng: 0.0012875 ),
 a4 = Artwork.create(title: "Fulcrum", artist: "Richard Serra", year: 1987, lat: 51.5182884, lng: -0.0837733 ),
 a5 = Artwork.create(title: "Nelson's Ship in a Bottle", artist: "Yinka Shonibare", year: 2010, lat: 51.4800943, lng: -0.008517 ),
+a6 = Artwork.create(title: "Traffic Light Tree", artist: "Pierre Vivant", year: 1998, lat: 51.5068188, lng: -0.0105748 ),
 
 user1 = User.create(username: "Bob1", email: "bob@bob.com", password: "password000")
 
