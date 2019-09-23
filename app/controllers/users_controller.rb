@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        user = User.find(params[:id])
+        user = @current_user
         render ({json: {user: UserSerializer.new(user)}})
     end
 
@@ -18,6 +18,28 @@ class UsersController < ApplicationController
             render json: { errors: user.errors.full_messages }, status: :not_accepted
         end
     end
+
+    def edit
+        user = @current_user
+        render ({json: {user: UserSerializer.new(user)}})
+    end
+
+    def update
+        user = @current_user
+        user.update(user_params)
+        if user.valid?
+            render json: user
+        else
+            render json: { errors: user.errors.full_messages }
+        end
+    end
+
+    def destroy
+        byebug
+        user = @current_user
+        user.destroy
+    end
+
 
     private
 
