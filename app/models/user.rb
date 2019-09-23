@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     has_secure_password
-    has_many :tours
+    has_many :tours, dependent: :destroy
 
     def token
         JWT.encode({ user_id: self.id }, ENV['RAILS_SECRET'])
