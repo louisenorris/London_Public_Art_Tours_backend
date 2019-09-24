@@ -11,6 +11,7 @@ class TourArtworksController < ApplicationController
     end
 
     def create
+        tour = 
         tour_artwork = TourArtwork.create(tour_artwork_params)
         if tour_artwork.valid?
             render json: {tour_artwork: TourArtworkSerializer.new(tour_artwork)}, status: :created
