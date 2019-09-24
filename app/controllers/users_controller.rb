@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     end
 
     def destroy
-        byebug
+        # byebug
         user = @current_user
         user.destroy
     end
