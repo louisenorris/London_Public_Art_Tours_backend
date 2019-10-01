@@ -10,6 +10,11 @@ class UsersController < ApplicationController
         render ({json: {user: UserSerializer.new(user)}})
     end
 
+    def find_user
+        user = User.find(params[:id])
+        render ({json: {user: UserSerializer.new(user)}})
+    end
+
     def create
         user = User.create(user_params)
         if user.valid?
