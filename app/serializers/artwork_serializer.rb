@@ -1,3 +1,3 @@
 class ArtworkSerializer < ActiveModel::Serializer
-  attributes :id, :title, :artist, :year, :lat, :lng, :address, :tour_artworks
+  attributes :id, :title, :artist, :year, :lat, :lng, :address, :description, :tour_artworks
 end
