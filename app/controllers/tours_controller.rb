@@ -13,11 +13,8 @@ class ToursController < ApplicationController
     def create
         tour = Tour.create(name: tour_params[:name], user: @current_user )
         tour_params["tour_artworks"].map do |artwork_id| 
-            byebug
             current_ta = TourArtwork.new({tour_id: tour.id, artwork_id: artwork_id.values[0]})
-            byebug
             current_ta.save
-
         end
         if tour.valid?
             render json: {tour: TourSerializer.new(tour)}, status: :created
